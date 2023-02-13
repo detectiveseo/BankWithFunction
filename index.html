@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    </style>
+</head>
+<body class="h-screen bg-[url('./img/bg-bank.png')] bg-center bg-cover flex flex-col justify-center items-center ">
+    <div class="bg-sky-300 p-20 rounded-lg">
+        <label class="text-white font-bold" for="email">Email<br>
+            <input class="p-2 rounded-sm block text-black font-light" type="email" name="" id="email" placeholder="Write your email here">
+        </label>
+        <label class="text-white font-bold" for="email">Password<br>
+            <input class="p-2 rounded-sm block text-black font-normal" type="password" name="" id="password" placeholder="Write your Password here">
+        </label>
+        <button class="bg-blue-700 hover:bg-blue-900 text-white p-2 font-bold rounded my-2 w-full uppercase mt-4" id="loginBtn">Login Now</button>
+        <p class="text-sm underline text-right text-gray-600">forgot password</p>
+    </div>
+    <script>
+       const loginBtn = document.getElementById('loginBtn');
+       loginBtn.addEventListener('click', function(){
+       const emailInput = document.getElementById('email');
+       const emailInputValue = emailInput.value;
+       const passwordInput = document.getElementById('password');
+       const passwordInputValue = passwordInput.value;
+        if(emailInputValue === "imboy8585@gmail.com" && passwordInputValue === "admin"){
+            window.location.href = "bank.html"
+        }
+        else(
+            alert("Sorry You're password and Email Address Is wrong")
+        )
+       })
+
+    </script>
+</body>
+</html>

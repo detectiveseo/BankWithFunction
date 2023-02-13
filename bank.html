@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="bg-neutral-600 text-center text-5xl uppercase font-semibold text-white py-10">Welcome Back To Unlimited Money</h1>
+    <!-- inquari section  -->
+    <section class="w-8/12 mx-auto grid grid-cols-3 gap-3 mt-10">
+        <div class="bg-green-600 p-5 rounded-lg text-white">
+            <h3 class="text-2xl upp font-semibold uppercase">Deposit</h3>
+            <h2 class="text-6xl font-bold">$<Span id="deposit">0</Span></h2>
+        </div>
+        <div class="bg-blue-600 p-7 rounded-lg text-white">
+            <h3 class="text-2xl upp font-semibold uppercase">Withdraw</h3>
+            <h2 class="text-6xl font-bold">$<Span id="withdraw">0</Span></h2>
+        </div>
+        <div class="bg-rose-600 p-5 rounded-lg text-white">
+            <h3 class="text-2xl upp font-semibold uppercase">Balance</h3>
+            <h2 class="text-6xl font-bold">$<Span id="balance">0</Span></h2>
+        </div>
+    </section>
+    <!-- input section  -->
+    <section class="grid grid-cols-2 gap-4 mt-20 w-8/12 mx-auto">
+        <div class="bg-fuchsia-600 p-10 rounded-lg">
+            <label for="diposit" class="text-white font-bold text-3xl uppercase">Diposit<br>
+                <input type="text" name="" id="depositInput" class="text-black text-2xl font-normal p-1 rounded w-full"></label>
+            <button class="bg-black py-3 px-7 mt-2 rounded text-white font-bold" id="dipositSub" onclick="calculate('deposit', 'depositInput')">Diposit</button>
+        </div>
+        <div class="bg-pink-600 p-10 rounded-lg">
+            <label for="withdraw" class="text-white font-bold text-3xl uppercase">Withdraw<br>
+                <input type="text" name="" id="withdrawInput" class="text-black text-2xl font-normal p-1 rounded w-full"></label>
+            <button class="bg-black py-3 px-7 mt-2 rounded text-white font-bold" id="withdrawSub" onclick="calculate('withdraw', 'withdrawInput')"> Withdraw</button>
+        </div>
+    </section>
+    <script src="./js/function.js"></script>
+    <script src="./js/calculation.js"></script>
+</body>
+</html>
